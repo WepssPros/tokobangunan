@@ -80,6 +80,8 @@ class UserController extends Controller
 
             User::create([
                 'name' => $request->name,
+                'alamat' => $request->alamat,
+                'notlp' => $request->notlp,
                 'email' => $request->email,
                 'username' => $request->username,
                 'password' => Hash::make($request->password),

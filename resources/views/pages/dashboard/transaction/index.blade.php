@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 <h2 class="font-semibold text-xl text-gray-800 leading-tight mb-10">
-    {{ __('Category') }}
+    {{ __('Transaction') }}
 </h2>
 <div class="col-md-12">
     <div class="card ">

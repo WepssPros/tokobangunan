@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 <h2 class="font-semibold text-xl text-gray-800 leading-tight mb-10">
-    {{ __('Category') }}
+    {{ __('User Terdaftar') }}
 </h2>
 <div class="col-md-12">
     <div class="card ">
@@ -18,6 +18,12 @@
                             </th>
                             <th class="text-center">
                                 Nama
+                            </th>
+                            <th class="text-center">
+                                Alamat
+                            </th>
+                            <th class="text-center">
+                                No Telephone
                             </th>
                             <th class="text-center">
                                 Username
@@ -56,6 +62,14 @@
             {
                 data: 'name',
                 name: 'name'
+            },
+            {
+                data: 'alamat',
+                name: 'alamat'
+            },
+            {
+                data: 'notlp',
+                name: 'notlp'
             },
             {
                 data: 'username',
