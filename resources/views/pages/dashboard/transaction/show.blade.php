@@ -128,7 +128,7 @@
                         <div class="w-11/12">
                             <p class="text-sm">
                                 Alamat Pengantaran</p>
-                            <p class="text-xs text-gray-500">{{$transaction->address}}</p>
+                            <p class="text-xs text-gray-500">{{$transaction->user->alamat}}</p>
                         </div>
                     </div>
                     <!-- end::Timeline item -->
@@ -205,7 +205,7 @@
                                 </tr>
                                 <tr>
                                     <th class="border px-6 py-4 text-right">Address</th>
-                                    <td class="border px-6 py-4">{{ $transaction->address }}</td>
+                                    <td class="border px-6 py-4">{{ $transaction->user->alamat }}</td>
                                 </tr>
                                 <tr>
                                     <th class="border px-6 py-4 text-right">Payment</th>
