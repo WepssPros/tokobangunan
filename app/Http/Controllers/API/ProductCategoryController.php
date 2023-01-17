@@ -12,15 +12,14 @@ class ProductCategoryController extends Controller
     public function all(Request $request)
     {
         $id = $request->input('id');
-        $limit = $request->input('limit', 6);
+        $limit = $request->input('limit', 100);
         $name = $request->input('name');
         $show_product = $request->input('show_product');
 
-        if($id)
-        {
+        if ($id) {
             $category = ProductCategory::with(['products'])->find($id);
 
-            if($category)
+            if ($category)
                 return ResponseFormatter::success(
                     $category,
                     'Data produk berhasil diambil'
@@ -35,10 +34,10 @@ class ProductCategoryController extends Controller
 
         $category = ProductCategory::query();
 
-        if($name)
+        if ($name)
             $category->where('name', 'like', '%' . $name . '%');
 
-        if($show_product)
+        if ($show_product)
             $category->with('products');
 
         return ResponseFormatter::success(
